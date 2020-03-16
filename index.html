@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>	
+
+        <link href="./images/favicon.png" rel="icon">
+        <title>Classico</title>
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar" data-offset="10">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-light fixed-top py-0" id="navbar">
+            <a href="#" class="navbar-brand" id="navbar__brand"><span>CLASSICO</span></a>
+            <button class="navbar-toggler" id="navbar__toggler" type="button" data-toggle="collapse" data-target="#myNav">
+                <span class="navbar-toggler-icon"></span>
+            </button> 
+            <div class="collapse navbar-collapse" id="myNav">
+                <ul class="navbar-nav ml-auto" id="navbar__nav">
+                    <li><a href="#hero" class="nav-link active" id="navbar__nav--nav-link">Home</a></li>
+                    <li><a href="#features" class="nav-link" id="navbar__nav--nav-link">Features</a></li>
+                    <li><a href="#about" class="nav-link" id="navbar__nav--nav-link">About</a></li>
+                    <li><a href="#team" class="nav-link" id="navbar__nav--nav-link">Our team</a></li>
+                    <li><a href="#portfolio" class="nav-link" id="navbar__nav--nav-link">Portfolio</a></li>
+                    <li><a href="#contact" class="nav-link" id="navbar__nav--nav-link">Contact</a></li>
+                </ul>          
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="hero" id="hero">
+            <div id="hero__carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                <li data-target="#hero__carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#hero__carousel" data-slide-to="1"></li>
+                <li data-target="#hero__carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images/slider/1.jpg" class="img-fluid" alt="slider image 1">
+                        <div class="carousel-caption d-flex">
+                            <h1>Creative web design agency</h1>
+                            <h3>Code your dream</h3>
+                            <a href="#features" class="btn btn-lg btn-secondary">Learn more</a> 
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img src="./images/slider/2.jpg" class="img-fluid" alt="slider image 2">
+                    <div class="carousel-caption d-flex">                   
+                        <h1>SASS, Bootstrap & Flexbox</h1>
+                        <h3>Work on all modern browsers</h3>
+                        <a href="#team" class="btn btn-lg btn-secondary">Meet our team</a>
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img src="./images/slider/3.jpg" class="img-fluid" alt="slider image 3">
+                    <div class="carousel-caption d-flex">
+                        <h1>More tools</h1>
+                        <h3>Bootstrap, Jquery, Unsplash </h3>
+                        <a href="#about" class="btn btn-lg btn-secondary">About us</a>
+                    </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#hero__carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#hero__carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div id="hero__carousel" class="carousel slide" data-ride="carousel">
+                
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section id="features">
+            <div class="container">
+                <div class="col" id="features__heading">
+                    <h1>Some features</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, ipsa cum ea distinctio reiciendis maxime non exercitationem alias natus expedita blanditiis sunt tempora vel accusamus sapiente.</p> 
+                </div>
+                <div class="row" id="features__cards">
+                    <div class="col-md-6 col-lg-3" id="features__cards--card">
+                        <a href="#"><ion-icon name="laptop-outline"></ion-icon></a>
+                        <div class="card-body">
+                            <h3>Responsive Design</h3>
+                            <p class="card-text">Cum sociis natoque penatibus et magnis dis parturient montes. Etiam elementum laoreet mauris. Ut rutrum feugiat neque.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" id="features__cards--card">
+                        <a href="#"><ion-icon name="settings-outline"></ion-icon></a>
+                        <div class="card-body">
+                            <h3>Bootstrap 4</h3>
+                            <p class="card-text">Etiam elementum laoreet mauris. Ut rutrum feugiat neque. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" id="features__cards--card">
+                        <a href="#"><ion-icon name="text-outline"></ion-icon></a>
+                        <div class="card-body">
+                            <h3>Google Web Fonts</h3>
+                            <p class="card-text">Ut rutrum feugiat neque. Etiam elementum laoreet mauris. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" id="features__cards--card">
+                        <a href="#"><ion-icon name="person-outline"></ion-icon></a>
+                        <div class="card-body">
+                            <h3>User Friendly</h3>
+                            <p class="card-text">Cum sociis natoque penatibus et magnis dis parturient montes. Etiam elementum laoreet mauris. Ut rutrum feugiat neque.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us -->
+        <section id="about">
+            <div class="container">
+                <div class="col-sm-12" id="about__box">
+                    <h1>About us</h1>
+                    <p>Etiam elementum laoreet mauris. Ut rutrum feugiat neque. Suspendisse viverra gravida nulla. Duis sed enim vitae metus nonummy venenatis.</p> 
+                </div>
+                <div class="row">
+                    <div class="col-md-6" id="about__details">
+                        <h2>We are <em>Classico</em></h2>
+                        <h3>Web Design and Development Agency</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam officiis repudiandae quisquam minima neque nulla illum eos odio ullam voluptatibus cumque voluptas doloremque dolorem harum dolores veniam numquam voluptatem beatae, atque tempora optio laborum aliquid facere! Eligendi, maiores, quos nobis blanditiis officiis voluptatibus quis a temporibus rerum dolore tempore ex!</p>
+                    </div>
+                    <div class="col-md-6" id="graph">
+
+                        <h4>HTML 5</h4>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                        </div>
+
+                        <h4>CSS 3</h4>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                        </div>
+
+                        <h4>Photoshop</h4>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                        </div>
+
+                        <h4>Jquery</h4>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet the Team -->
+        <section id="team">
+            <div class="container">
+                <div class="col" id="team__heading">
+                    <h1>Meet the team</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, consequatur velit quod repudiandae harum commodi minus amet neque! Eveniet, culpa!</p>
+                </div>
+                <div class="row" id="team__cards">
+                    <div class="col-md-3 col-sm-6" id="team__cards--card">
+                        <img src="./images/member-1.jpg" class="card-img-top" alt="Walter White">
+                        <div class="card-body">
+                            <h3 class="card-title">Walter White</h3>
+                            <p class="card-text">Chief Executive Officer</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" id="team__cards--card">
+                        <img src="./images/member-2.jpg" class="card-img-top" alt="William Anderson">
+                        <div class="card-body">
+                            <h3 class="card-title">William Anderson</h3>
+                            <p class="card-text">Chief Technical Officer</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" id="team__cards--card">
+                        <img src="./images/member-3.jpg" class="card-img-top" alt="Amanda Jepson">
+                        <div class="card-body">
+                            <h3 class="card-title">Amanda Jepson</h3>
+                            <p class="card-text">Designer</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" id="team__cards--card">
+                        <img src="./images/member-4.jpg" class="card-img-top" alt="John Davis">
+                        <div class="card-body">
+                            <h3 class="card-title">John Davis</h3>
+                            <p class="card-text">Marketing Head</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio">
+            <div class="container">
+                <div class="col" id="portfolio__heading">
+                    <h1>PORTFOLIO</h1>
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta et id nemo ea suscipit ex rerum animi ut tenetur?</P>
+                </div>
+                <div class="row d-flex" id="portfolio__grid">
+                    <div class="col-8 col-sm-6 col-md-4 p-2">
+                        <img src="./images/p1.jpg" class="img-fluid" alt="picture1">  
+                    </div>
+                    <div class="col-8 col-sm-6 col-md-4 p-2">
+                        <img src="./images/p2.jpg" class="img-fluid" alt="picture2">    
+                    </div>
+                    <div class="col-8 col-sm-6 col-md-4 p-2">
+                        <img src="./images/p3.jpg" class="img-fluid" alt="picture3">    
+                    </div>
+                    <div class="col-8 col-sm-6 col-md-4 p-2"> 
+                        <img src="./images/p4.jpg" class="img-fluid" alt="picture4">    
+                    </div>
+                    <div class="col-8 col-sm-6 col-md-4 p-2">
+                        <img src="./images/p5.jpg" class="img-fluid" alt="picture5">    
+                    </div>
+                    <div class="col-8 col-sm-6 col-md-4 p-2">
+                        <img src="./images/p6.jpg" class="img-fluid" alt="picture6">    
+                    </div>
+                    <div class="col-8 col-sm-6 col-md-4 p-2">
+                        <img src="./images/p7.jpg" class="img-fluid" alt="picture7">    
+                    </div>
+                    <div class="col-8 col-sm-6 col-md-4 p-2">
+                        <img src="./images/p8.jpg" class="img-fluid" alt="picture8">    
+                    </div>
+                    <div class="col-8 col-sm-6 col-md-4 p-2">
+                        <img src="./images/p9.jpg" class="img-fluid" alt="picture9">    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="container">
+                <div class="col" id="contact__heading">
+                    <h1>CONTACT US</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi laudantium molestiae culpa voluptas! Dolores, fugit et sit vitae esse reiciendis accusantium cumque aperiam deserunt eum enim iure molestias officia perferendis.</p>
+                </div>
+                <div class="row" id="contact__box">
+                    <div class="col-sm-4 col-12" id="address-left">
+                        <h2>OUR ADDRESS</h2>
+                        <p><ion-icon name="call-outline"></ion-icon>090-080-0980</p>
+                        <p><ion-icon name="mail-outline"></ion-icon>info@company.com</p>
+                        <p><ion-icon name="earth-outline"></ion-icon>http://www.company.com</p>
+                        <p><ion-icon name="location-outline"></ion-icon>360 Aenen, Mac 10450</p>
+                    </div>
+                    <div class="col-sm-8 col-12" id="contact__box--form">
+                        <form>
+                            <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="col form-group">
+                                <input type="email" class="form-control required" placeholder="Email">
+                            </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <input type="text" class="form-control" placeholder="Subject">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <textarea class="form-control" id="" cols="30" rows="5" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <a href="#contact" class="btn btn-lg btn-secondary">Send message</a>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="social-media-icon" id="social-icon">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-tumblr"></ion-icon></a>
+                    </div>
+                </div>
+                <p>Copyright &copy; All rights reserved</p>
+            </div>
+        </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script>
+        $('.navbar-collapse a').click(function(){
+            $(".navbar-collapse").collapse('hide');
+        });
+    </script>
+    </body>
+</html>

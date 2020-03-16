@@ -1,0 +1,523 @@
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// Variables
+$color-orange: #ffa400;
+$color-white: #fff;
+$color-black: #000;
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// Mixins
+@mixin section-top {
+    padding: 8rem 0;
+}
+
+@mixin section-h1 {
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+@mixin section-h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+@mixin section-p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+@mixin button-style {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+} 
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// Base
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;  //1 rem = 10px; 10px/16px = 62.5%
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// Navbar
+#navbar {
+    background-color: $color-white;
+    border: none;
+    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.2);
+
+    &__brand span {
+        color: $color-orange;
+        font-size: 3rem;
+        font-weight: 600;
+        padding: 1rem 0 0 1rem;
+        height: 6rem;
+        letter-spacing: .2rem;
+        align-items: center;
+    }
+
+    &__brand span:hover {
+        color: rgb(90, 90, 90);
+    }
+
+    &__nav {
+
+        &--nav-link {
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 0;
+            width: 100%;
+            height: 6rem;   
+            margin-right: 2rem;   
+            transition: all 0.2s ease;
+    
+            display: flex;
+            align-items: center;
+            justify-content: center;    
+            align-content: stretch;
+        }
+    
+        &--nav-link:hover {
+            color: $color-white;
+            background-color: $color-orange;
+        }
+    
+        &--nav-link:active {
+            color: $color-black;
+            background-color: $color-orange;
+        }
+
+        &--nav-link.active {
+            color: $color-white;
+            background-color: $color-orange;
+        }
+    }
+
+    #navbar__toggler {
+        border:none;
+        padding: 1.8rem;
+        transition: all .2s;
+    }
+}  
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// Hero
+hero {
+    margin-top: -1px;
+
+    &__carousel {
+        height: 50rem;
+    }
+}
+
+.carousel-item:before {
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(0,0,0,0.6);
+}
+
+.carousel-item {
+
+    img {
+        height: 50vw;
+        width: 100vw;
+    }
+
+@media only screen and ( max-width: 576px ) {
+    img {
+        height: 45vh;
+        width: 100vw;
+    }
+}
+
+    .carousel-caption {
+        color: $color-white;
+        font-size: 2rem;
+        width: 70%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1, h3 {
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            @include button-style;
+            background-color: $color-orange;
+            color: $color-white;
+            border: none;
+            border-radius: 3rem;
+            cursor: pointer;
+            margin-top: 3rem;
+            padding: 1rem 3rem;
+            transition: all .3s ease;
+        }
+
+        a:hover {
+            margin-top: 3rem;
+            background-color: $color-white;
+            color: $color-orange;
+            transform: translateY(-3px);
+        }
+
+        @media only screen and ( max-width: 576px ) {
+
+            h1, h3 {
+                font-size: 70%;
+            }
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// Features
+
+#features {
+    background-color: #eee;
+    padding: 8rem 0;
+
+    &__heading {
+        padding: 0 10rem;
+        text-align: center;
+    
+        h1 { @include section-h1; }
+    
+        p { @include section-p; }
+    }
+
+    @media only screen and ( max-width: 768px ) {
+        #features__heading {
+            padding: 0;
+        }
+    }
+
+    &__cards {
+
+        &--card {
+            text-align: center;
+            width: 100%;
+
+            h3 { @include section-h3; }
+
+            p { @include section-p; }
+        }
+        ion-icon {
+            color: $color-orange;
+            width: 8rem;
+            height: 8rem;
+            text-align: center;
+            margin: 5px 0;
+            transition: all 0.4s;
+        }
+
+        ion-icon:hover {
+            transform: rotate(360deg);
+        }
+
+        @media only screen and ( max-width: 768px ) {
+            ion-icon {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+    
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// About Us
+#about {
+    padding: 8rem 0;
+
+    &__box {
+        padding: 0 10rem;
+        text-align: center;
+
+        h1 { @include section-h1; }
+
+        p { @include section-p; }
+    }
+
+    @media only screen and ( max-width: 768px ) {
+        #about__box {
+            padding: 0;
+        }
+    }
+
+    &__details {
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        h3 { @include section-h3; }
+
+        p { @include section-p; }
+    }
+
+    #graph {
+
+        display: flex;
+        flex-direction: column;
+
+        h4 {
+            text-transform: uppercase;
+            margin: 1rem 0;
+            justify-content: flex-start;
+
+            span {
+                justify-content: flex-end;
+            }
+        }
+
+        .progress-bar {
+            background-color: $color-orange;
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// Team
+#team {
+    background-color: #eee;
+    padding: 8rem 0;
+
+    &__heading {
+        padding: 0 10rem;
+        text-align: center;
+    
+        h1 {
+            @include section-h1;
+        }
+        h3 {
+            @include section-h3;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+        }
+    
+        p { @include section-p; }
+    }
+
+    @media only screen and ( max-width: 768px ) {
+        #team__heading {
+            padding: 0;
+        }
+    }
+
+    &__cards {
+
+        &--card {
+            text-align: center;
+            width: 100%;
+
+            img {
+                margin-top: 2rem;
+                width: 15rem;
+                height: 15rem;
+                border-radius: 50%;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+                transition: all .3s ease;
+            }
+
+            img:hover {
+                transform: translateY(-5px);
+                filter: brightness(70%);
+                box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+
+            }
+
+            h3 {
+                @include section-h3;
+                color: $color-orange;
+            }
+
+            p { @include section-p; }
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// Portfolio
+#portfolio {
+    padding: 8rem 0;
+
+    &__heading {
+        padding: 0 10rem;
+        text-align: center;
+
+        h1 { @include section-h1; }
+
+        p { @include section-p; }
+    }
+
+    @media only screen and ( max-width: 768px ) {
+        #portfolio__heading {
+            padding: 0;
+        }
+    }
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 0.4rem;
+
+        .col {
+            padding: 0 0.4rem;   
+        }   
+        
+        img {
+            background-size: cover;
+            width: 100%;
+            height: 200px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+            margin-top: 8px;
+            position: relative;
+            overflow: hidden;
+            transition: all .3s ease;
+        }
+
+        img:hover {
+            filter: brightness(50%);
+            transform: scale(0.95);
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// Contact
+#contact {
+    background-color: #303030;
+    color: #eee;
+    padding: 6rem 0;
+
+    &__heading {
+        padding: 0 10rem;
+        text-align: center;
+
+        h1 { @include section-h1; }
+
+        p { @include section-p; }
+    }
+
+    @media only screen and ( max-width: 768px ) {
+        #contact__heading {
+            padding: 0;
+        }
+    }
+
+    &__box {
+        #address-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                text-align: left;
+                margin-bottom: 3rem;
+            }
+    
+            p {
+                @include section-p;
+                font-size: 1.2rem;
+
+                ion-icon {
+                    width: 2rem;
+                    height: 2rem;
+                    color: $color-orange;
+                    margin-right: 1rem;
+                    transform: translateY(5px);
+                }
+            }
+        }
+        &--form {
+
+            a {
+                @include button-style;
+                background-color: transparent;
+                padding: 1rem 2rem;
+                transition: all .3sec ease;
+            }
+
+            a:hover {
+                background-color: $color-orange;
+            }
+
+            a:active {
+                color: $color-black;
+                transform: translateY(3px);
+            }
+
+            @media only screen and ( max-width: 576px ) {
+                text-align: center;
+            }
+        }
+  
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// Footer
+footer {
+    border-top: 1px solid #404040;
+	background: #202020;
+	color: $color-white;
+    padding: 3rem 0 1rem 0;
+
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #social-icon a {
+        border: 1px solid $color-white;
+        padding: 0.8rem 1rem;
+        border-radius: 50%;
+        color: $color-white;
+        font-size: 1.5rem;
+        transition: all 0.2s ease-in;
+        margin: 0 4px;
+    }    
+
+    #social-icon a:hover {
+        border-color: transparent;
+	    background: $color-orange;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
